@@ -10,7 +10,7 @@ jobs:
     if: 1
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.1.7
       - name: Prepare build environment
         run: |
           env
@@ -45,7 +45,7 @@ jobs:
           set -x
 
       - name: Cache Chromium
-        uses: actions/cache@v3
+        uses: actions/cache@v4.0.2
         with:
           path: |
             ${{ github.workspace }}/var/chrome-mac.zip
@@ -60,7 +60,7 @@ jobs:
           fi
 
       - name: Cache Firefox
-        uses: actions/cache@v3
+        uses: actions/cache@v4.0.2
         with:
           path: |
             ${{ github.workspace }}/var/firefox.dmg
