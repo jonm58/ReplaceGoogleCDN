@@ -10,7 +10,7 @@ jobs:
     if: 1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.1.7
       - name: Prepare Source Code
         run: |
           lscpu
@@ -33,7 +33,7 @@ jobs:
           ls -lah dist
 
       - name: production artifacts v2
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: replace-google-cdn-v2
           retention-days: 7
@@ -41,7 +41,7 @@ jobs:
             dist/ReplaceGoogleCDN-v2.zip
 
       - name: production artifacts v3
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: replace-google-cdn-v3
           retention-days: 7
@@ -54,7 +54,7 @@ jobs:
           ls -lah dist
 
       - name: production artifacts v3 chromium
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: replace-google-cdn-v3-chromium
           retention-days: 7
@@ -62,7 +62,7 @@ jobs:
             dist/ReplaceGoogleCDN-v3-chromium.zip
 
       - name: production artifacts v3 firefox
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.3.4
         with:
           name: replace-google-cdn-v3-firefox
           retention-days: 7
