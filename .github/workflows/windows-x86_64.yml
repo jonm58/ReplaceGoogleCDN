@@ -8,7 +8,7 @@ env:
 jobs:
   windows:
     if: 1
-    runs-on: windows-latest
+    runs-on: windows-2025
     steps:
       - name: Prepare git
         run: |
@@ -26,7 +26,7 @@ jobs:
           ipconfig /all
 
       - name: Cache Chromium
-        uses: actions/cache@v4
+        uses: actions/cache@v4.3.0
         with:
           path: |
             ${{ github.workspace }}\var\chrome-win.zip
@@ -42,7 +42,7 @@ jobs:
           fi
 
       - name: Cache Firefox
-        uses: actions/cache@v4
+        uses: actions/cache@v4.3.0
         with:
           path: |
             ${{ github.workspace }}\var\firefox.exe
